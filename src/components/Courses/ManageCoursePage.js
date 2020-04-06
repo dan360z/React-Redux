@@ -118,6 +118,8 @@ const mapDispatchToProps = {
   loadAuthors: authorActions.loadAuthors,
   saveCourse: courseActions.saveCourse,
 }
+// When declaired as an object, each property is
+// automatically bound to dispatch.
 
 export default connect(mapStateToProps, mapDispatchToProps)(ManageCoursePage);
 

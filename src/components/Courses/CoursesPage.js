@@ -68,7 +68,8 @@ CoursesPage.propTypes = {
   authors: PropTypes.array.isRequired,
   loadCourses: PropTypes.func.isRequired,
   loadAuthors: PropTypes.func.isRequired,
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired,
+  deleteCourse: PropTypes.func.isRequired
 };
 
 function mapStateToProps(state) {
@@ -95,9 +96,5 @@ function mapDispatchToProps(dispatch) {
     // createCourse: course => dispatch(courseActions.createCourse(course)) // Dispatch is the function that notifys redux about an action.
   };
 }
-
-// const mapDispatchToProps = {
-//   createCourse: courseActions.createCourse, // When declaired as an object, each property is automatically bound to dispatch.
-// }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
